@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/minimal-tech-blog/sw.js', { scope: '/minimal-tech-blog/' })})}
