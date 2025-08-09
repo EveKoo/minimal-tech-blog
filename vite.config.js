@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: '/minimal-tech-blog/',// 关键：GitHub Pages 子路径
   plugins: [
     vue(),
     VitePWA({
@@ -17,6 +18,8 @@ export default defineConfig({
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
+        start_url: '/minimal-tech-blog/', // 关键
+        scope: '/minimal-tech-blog/',     // 关键
         icons: [
           {
             src: 'favicon.ico',

@@ -6,7 +6,7 @@ import App from './App.vue'
 // PWA 注册
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register(import.meta.env.BASE_URL + 'sw.js')
       .then(registration => {
         console.log('SW registered: ', registration)
       })
